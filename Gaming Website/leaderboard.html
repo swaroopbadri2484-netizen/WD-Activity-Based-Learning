@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leaderboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #101426 url("bg.jpg") center / cover fixed;
+            color: white;
+        }
+
+        header,
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: aqua;
+        }
+
+        nav {
+            padding: 15px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 8px 10px;
+            color: #ff00e5;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: aqua;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .leaderboard {
+            width: 100%;
+            max-width: 750px;
+            margin: 25px auto;
+            border-collapse: collapse;
+            background: rgba(18, 167, 158, 0.9);
+        }
+
+        .leaderboard th,
+        .leaderboard td {
+            padding: 14px;
+            border: 1px solid aqua;
+        }
+
+        .leaderboard th {
+            background: #151b32;
+            color: aqua;
+        }
+
+        .leaderboard tr:nth-child(even) {
+            background: rgba(0, 0, 0, 0.2);
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        .note {
+            color: #e0e7ff;
+        }
+
+        footer p {
+            color: #e0e7ff;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Gaming Leaderboard</h1>
+        <p>Check out the top players and their scores!</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="tournaments.html">Tournaments</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h2>Top Players</h2>
+        <p class="note">Sample scores for this project. Change them to your actual results.</p>
+
+        <div class="table-container">
+            <table class="leaderboard">
+                <thead>
+                    <tr>
+                        <th scope="col">Rank</th>
+                        <th scope="col">Player</th>
+                        <th scope="col">Game</th>
+                        <th scope="col">Points</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Player One</td>
+                        <td>Free Fire</td>
+                        <td>950</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Player Two</td>
+                        <td>BGMI</td>
+                        <td>820</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Player Three</td>
+                        <td>Valorant</td>
+                        <td>760</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Player Four</td>
+                        <td>Chess</td>
+                        <td>640</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Player Five</td>
+                        <td>Minecraft</td>
+                        <td>580</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <p>Keep playing and climb the leaderboard!
+
+        </p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #101426 url("bg.jpg") center / cover fixed;
+            color: white;
+        }
+
+        header,
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: aqua;
+        }
+
+        nav {
+            padding: 15px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        nav a {
+            display: inline-block;
+            margin: 8px 10px;
+            color: #ff00e5;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: aqua;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .game-library>input {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+        }
+
+        .game-library>label {
+            display: inline-block;
+            margin: 20px 5px 15px;
+            padding: 10px 15px;
+            border: 1px solid aqua;
+            border-radius: 5px;
+            background: #151b32;
+            color: white;
+            cursor: pointer;
+        }
+
+        .game-library>label:hover,
+        .game-library>input:checked+label {
+            background: #007bff;
+        }
+
+        .game-library>input:focus-visible+label {
+            outline: 2px solid white;
+            outline-offset: 3px;
+        }
+
+        .game-list {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 20px;
+        }
+
+        #filter-action:checked~.game-list .game-card:not([data-category~="action"]),
+        #filter-shooting:checked~.game-list .game-card:not([data-category~="shooting"]),
+        #filter-adventure:checked~.game-list .game-card:not([data-category~="adventure"]),
+        #filter-strategy:checked~.game-list .game-card:not([data-category~="strategy"]) {
+            display: none;
+        }
+
+        .game-card {
+            min-width: 0;
+            padding: 15px;
+            border: 2px solid aqua;
+            border-radius: 10px;
+            background: rgba(18, 167, 158, 0.9);
+        }
+
+        .game-card img {
+            display: block;
+            width: 100%;
+            height: 200px;
+            border-radius: 7px;
+            background: rgba(0, 0, 0, 0.2);
+            object-fit: contain;
+        }
+
+        @media (max-width: 600px) {
+            .game-list {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (max-width: 420px) {
+            .game-list {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .play-btn {
+            /* Layout & Behavior */
+            display: inline-block;
+            text-decoration: none;
+
+
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: bold;
+            margin-top: 15px;
+
+            transition: background-color 0.2s ease-in-out, transform 0.1s ease;
+        }
+
+
+        .play-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .play-btn:active {
+            transform: scale(0.97);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Explore Games</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="tournaments.html">Tournaments</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <h2>Choose Your Game</h2>
+        <p>Pick a game, have fun, and challenge your skills!</p>
+
+        <section class="game-library" aria-label="Game library">
+            <input type="radio" name="game-filter" id="filter-all" checked>
+            <label for="filter-all">All Games</label>
+
+            <input type="radio" name="game-filter" id="filter-action">
+            <label for="filter-action">Action</label>
+
+            <input type="radio" name="game-filter" id="filter-shooting">
+            <label for="filter-shooting">Shooting</label>
+
+            <input type="radio" name="game-filter" id="filter-adventure">
+            <label for="filter-adventure">Adventure</label>
+
+            <input type="radio" name="game-filter" id="filter-strategy">
+            <label for="filter-strategy">Strategy</label>
+
+            <div class="game-list">
+                <article class="game-card" data-category="action shooting">
+                    <img src="freefire.jpg" alt="Free Fire game">
+                    <h2>Free Fire</h2>
+                    <p>Survive and conquer in this exciting battle royale game.</p>
+                    <a href="https://ff.garena.com/en" target="_blank" rel="noopener noreferrer" class="play-btn">Play
+                        Free Fire</a>
+                </article>
+
+                <article class="game-card" data-category="action shooting">
+                    <img src="bgmi.jpg" alt="BGMI game">
+                    <h2>BGMI</h2>
+                    <p>Play with your friends and fight to become the winner.</p>
+                    <a href="https://battlegroundsmobileindia.com/en/news" target="_blank" rel="noopener noreferrer"
+                        class="play-btn">Play
+                        BGMI</a>
+                </article>
+
+                <article class="game-card" data-category="action shooting">
+                    <img src="valorant.jpg" alt="Valorant game">
+                    <h2>Valorant</h2>
+                    <p>Use teamwork and aim to win in this tactical shooting game.</p>
+                    <a href="https://playvalorant.com/en-us/" target="_blank" rel="noopener noreferrer"
+                        class="play-btn">Play
+                        Valorant</a>
+                </article>
+
+                <article class="game-card" data-category="adventure">
+                    <img src="Minecraft.jpg" alt="Minecraft game">
+                    <h2>Minecraft</h2>
+                    <p>Build, explore, and survive in your own creative world.</p>
+                    <a href="https://www.minecraft.net/en-us/" target="_blank" rel="noopener noreferrer"
+                        class="play-btn">Play
+                        Minecraft</a>
+                </article>
+
+                <article class="game-card" data-category="strategy">
+                    <img src="chess.png" alt="Chess game">
+                    <h2>Chess</h2>
+                    <p>Plan your moves, think ahead, and checkmate your opponent.</p>
+                    <a href="https://www.chess.com/" target="_blank" rel="noopener noreferrer" class="play-btn">Play
+                        Chess</a>
+                </article>
+
+                <article class="game-card" data-category="action shooting">
+                    <img src="call of duty.png" alt="Call of Duty game">
+                    <h2>Call of Duty</h2>
+                    <p>Take on action-packed missions and fast-paced battles.</p>
+                    <a href="https://www.callofduty.com/" target="_blank" rel="noopener noreferrer"
+                        class="play-btn">Play
+                        Call of Duty</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Choose your game. Challenge your skills. Become a champion!</p>
+        <h6>~ Designed by Swaroop Naidu😎 ~</h6>
+    </footer>
+</body>
+
+</html>

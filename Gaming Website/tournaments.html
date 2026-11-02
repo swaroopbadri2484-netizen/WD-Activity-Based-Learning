@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tournaments</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #101426 url("bg.jpg") center / cover fixed;
+            color: white;
+        }
+
+        header,
+        footer {
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            color: aqua;
+        }
+
+        nav {
+            padding: 15px;
+            text-align: center;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        nav a {
+            margin: 10px;
+            color: #ff00e5;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: aqua;
+        }
+
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .intro {
+            margin: 25px 0;
+        }
+
+        .tournament-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .tournament-card {
+            width: 260px;
+            margin: 15px;
+            padding: 20px;
+            border: 2px solid aqua;
+            border-radius: 10px;
+            background: rgba(18, 167, 158, 0.9);
+        }
+
+        .tournament-card h3 {
+            color: white;
+        }
+
+        .game-name {
+            color: #151b32;
+            font-weight: bold;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 6px 10px;
+            border-radius: 5px;
+            background: #151b32;
+            color: aqua;
+        }
+
+        .rules {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 15px 25px;
+            border-radius: 10px;
+            background: rgba(0, 0, 0, 0.6);
+            text-align: left;
+        }
+
+        .rules h2 {
+            text-align: center;
+        }
+
+        .rules li {
+            margin: 10px 0;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                display: inline-block;
+            }
+
+            .tournament-card {
+                width: 100%;
+                max-width: 320px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Gaming Tournaments</h1>
+        <p>Play with your friends and show your skills!</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="games.html">Games</a>
+        <a href="tournaments.html">Tournaments</a>
+        <a href="leaderboard.html">Leaderboard</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <main>
+        <section class="intro">
+            <h2>Upcoming Tournaments</h2>
+            <p>Choose a tournament and get ready to compete.</p>
+        </section>
+
+        <section class="tournament-list" aria-label="Upcoming tournaments">
+            <article class="tournament-card">
+                <p class="game-name">Free Fire</p>
+                <h3>Battle Royale Cup</h3>
+                <p>Date: November 15, 2026</p>
+                <p>Mode: Solo</p>
+                <p>Entry: 100 ruppes</p>
+                <span class="status">Registration open</span>
+            </article>
+
+            <article class="tournament-card">
+                <p class="game-name">BGMI</p>
+                <h3>Squad Showdown</h3>
+                <p>Date: November 22, 2026</p>
+                <p>Mode: Squad</p>
+                <p>Entry: 100 ruppes</p>
+                <span class="status">Registration open</span>
+            </article>
+
+            <article class="tournament-card">
+                <p class="game-name">Valorant</p>
+                <h3>Campus Champions</h3>
+                <p>Date: December 5, 2026</p>
+                <p>Mode: 5 vs 5</p>
+                <p>Entry: 100 ruppes</p>
+                <span class="status">Coming soon</span>
+            </article>
+        </section>
+
+        <section class="rules">
+            <h2>Basic Rules</h2>
+            <ul>
+                <li>Be respectful to other players.</li>
+                <li>Use your own game account.</li>
+                <li>Join the match on time.</li>
+                <li>Play fair and follow the game rules.</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Good luck and have fun!</p>
+    </footer>
+</body>
+
+</html>
